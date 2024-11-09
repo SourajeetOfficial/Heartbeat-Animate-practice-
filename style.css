@@ -1,0 +1,72 @@
+
+body {
+    background-color: black;
+}
+
+.icon {
+    text-align: center;
+    padding-top: 100px;
+}
+
+#textUp, #textDown {
+    text-align: center;
+    padding-top: 50px;
+    color: red;
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+#textDown {
+    animation-name: moveAlt;
+}
+
+.fa-solid.fa-heart.fa-10x {  /* Corrected to lowercase "x" */
+    color: red;
+    animation-name: grow, colorChange;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+/* Glow effect using text-shadow on hover */
+.fa-solid.fa-heart.fa-10x:hover {
+    animation-name: grow, colorChange;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+}
+
+.text h1:hover {
+    
+    text-shadow: 0 0 10px magenta;
+}
+
+#textUp h1:hover {
+   
+    text-shadow: 0 0 10px magenta, 0 0 20px magenta, 0 0 30px magenta; /* Added multiple layers for a more intense glow */
+}
+
+@keyframes move {
+    0% { transform: translateX(-20%); }
+    50% { transform: translateX(20%); }
+    100% { transform: translateX(-20%); }
+}
+
+@keyframes moveAlt {
+    0% { transform: translateX(20%); }
+    50% { transform: translateX(-20%); }
+    100% { transform: translateX(20%); }
+}
+
+@keyframes grow {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    50% { color: pink; }
+    100% { color: red; }
+}
+
+
